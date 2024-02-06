@@ -33,5 +33,10 @@ pipeline {
                 }
             }
         }
+        stage('Pull Docker Image from DockerHub') {
+            steps {
+                script {
+                    sh 'docker pull devops-integration:latest'
+                    sh 'docker run --name -d devops-integration:latest myapp'
     }
 }
