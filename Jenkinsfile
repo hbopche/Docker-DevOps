@@ -38,5 +38,9 @@ pipeline {
                 script {
                     sh 'docker pull devops-integration:latest'
                     sh 'docker run --name -d devops-integration:latest myapp'
+                }
+            }   
+        }    
     }
 }
+    
