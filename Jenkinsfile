@@ -39,7 +39,7 @@ pipeline {
                     withCredentials([string(credentialsId: 'dockerhubpwd', variable: 'dockerhubpwd')]) {
                     sh 'docker login -u hbopche -p ${dockerhubpwd}'    
 }
-                    sh 'docker pull devops-integration:latest'
+                    sh 'docker pull hbopche/devops-integration:latest'
                     sh 'docker run --name -d devops-integration:latest myapp'
                 }
             }   
