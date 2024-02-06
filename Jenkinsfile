@@ -40,7 +40,7 @@ pipeline {
                     sh 'docker login -u hbopche -p ${dockerhubpwd}'    
 }
                     sh 'docker pull hbopche/devops-integration:latest'
-                    sh 'docker run --name -d hbopche/devops-integration:latest myapp'
+                    sh 'docker run -d hbopche/devops-integration:latest --name myapp'
                 }
             }   
         }    
